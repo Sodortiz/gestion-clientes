@@ -1,0 +1,11 @@
+name: Consulta de Cliente
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notificación
+        run: echo "Se ha consultado la información de un cliente. Información enviada al equipo."
