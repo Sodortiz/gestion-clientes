@@ -1,0 +1,12 @@
+name: Modificación de Código
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  revisar-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chequeo de PR para Modificación de Código
+        run: echo "Se ha abierto una nueva PR. Revisar los cambios para la modificación del código."
