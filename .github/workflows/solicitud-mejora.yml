@@ -1,0 +1,15 @@
+name: Solicitud de Mejora
+
+on:
+  issues:
+    types: [labeled]
+  issue_comment:
+    types: [created]
+
+jobs:
+  solicitud-mejora:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'mejora')
+    steps:
+      - name: Notificar Solicitud de Mejora
+        run: echo "Se ha solicitado una mejora. Revisar la issue #${{ github.event.issue.number }}."
